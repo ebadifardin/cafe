@@ -9,3 +9,9 @@ class Catgory(models.Model):
 
     def __str__(self):
         return f"{self.titel} ,{self.descriptions}"
+
+class Pool(models.Model):
+    name=models.CharField(max_length=150)
+    email=models.EmailField(max_length=100)
+    message=models.TextField()
+

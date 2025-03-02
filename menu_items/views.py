@@ -1,3 +1,10 @@
 from django.shortcuts import render
+from .models import MenuItem
 
-# Create your views here.
+def show_menu(request):
+    menu_obj=MenuItem.objects.all()
+    contaxe={
+        "menu":menu_obj
+    }
+
+    return render(request,"menu.html",contaxe)
